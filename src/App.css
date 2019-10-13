@@ -1,22 +1,234 @@
-.App {
+/* @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Kalam:400,700&display=swap'); */
+* {
   text-align: center;
+	/* font-family: 'Kalam', cursive; */
+	/* font-family: 'Cormorant Garamond', serif; */
+	font-family: 'Montserrat', sans-serif;
+	margin: 0px;
 }
-
-.App-logo {
-  height: 40vmin;
+.titleAndSearch {
+  /* background-color: palevioletred; */
+  padding: 20px;
+	color: white;
+	background-image: linear-gradient(to top, rgb(151,217,225,0)0%, rgb(217,175,217,1) 100%);
+	background-repeat: no-repeat;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainDiv {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 85%;
+  margin-left: auto;
+	margin-right: auto;
+}
+.picContainer {
+  flex: 0 0 30%;
+  margin-bottom: 30px;
+  margin-top: 20px;
+	/* border: 2px outset palevioletred; */
+	border: 10px solid #fff;
+  border-bottom: 45px solid #fff;
+  -webkit-box-shadow: 3px 3px 3px #777;
+     -moz-box-shadow: 3px 3px 3px #777;
+					box-shadow: 3px 3px 3px #777;
+	transition: all .3s ease-in-out;
+	animation: fadein ease-in-out 2s;
+}
+.searchFor {
+	color: palevioletred;
+	animation: fadein ease-in 2.5s;
+	font-weight: 300;
+	margin-bottom: 30px;
+	transition: all .3s ease-in-out;
+}
+.myImg {
+  height: 200px;
+	width: auto;
+	/* width:100%;
+	height:auto; */
+	opacity: 0.92;
+	transition: all .3s ease-in-out;
+}
+.descriptionDiv {
+  height: 60px;
+}
+.descriptionText {
+	color: palevioletred;
+	font-size:17px;
+	font-weight: 400;
+	transition: all .3s ease-in-out;
+}
+.footerSection {
+  margin-top: 30px;
+}
+.btn {
+  margin: 5px;
+  border-radius: 4px;
+  background-color: palevioletred;
+  border: none;
+	padding: 10px;
+	color:white;
+	font-size: 14px;
+	font-weight: 300;
+	transition: all .3s ease-in-out;
 }
 
-.App-link {
-  color: #09d3ac;
+.searchButtons {
+  display: block;
+  margin-top: 10px;
+}
+.title {
+	font-size:90px;
+	margin-top:10px;
+	color: #a699cc;
+	font-weight:400;
+	font-family: 'Dancing Script', cursive;
+	animation: mover 1.3s infinite alternate;
+}
+.searchbar{
+	border-radius: 4px;
+	width:17%;
+	height:25px;
+}
+.likesAndDownloads {
+	width:90%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.profileImage {
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right:2%;
+}
+.username {
+	display: inline-block;
+	font-size: 14px;
+	margin-right: 30px;
+	font-weight:400;
+	transition: all .3s ease-in-out;
+}
+.likes {
+	display: inline-block;
+	font-size: 14px;
+	margin-left:40px;
+	font-weight: 300;
+}
+.likesSpan {
+	margin-left:10px;
+}
+.thumbsUp {
+	color: palevioletred;
+}
+.hashtagSection {
+	display:flex;
+	margin-top: 13px;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom:20px;
+}
+.singleHashtag {
+	flex: 0 0 25%;
+	display: inline-block;
+	font-size:13px;
+	color:gray;
+	transition: all .3s ease-in-out;
+}
+.credits {
+	font-size:10px;
+	color: gray;
+	margin-top:6px;
+}
+@media only screen 
+  and (min-width: 762px) 
+  and (max-width: 1112px) {
+		.picContainer {
+			flex: 0 0 40%;
+		}
+		.mainDiv {
+			justify-content: space-between;
+		}
+
+}
+@media only screen and (max-width: 760px) {
+	.picContainer{
+		flex: 0 0 80%;
+	}
+	.title {
+		font-size: 60px;
+	}
+	.searchbar {
+		width:50%;
+	}
+	.btn {
+		padding: 8px;
+		font-size: 12px;
+	}
+	.picContainer {
+		flex: 0 0 100%;
+		margin-bottom: 20px;
+		margin-top: 20px;
+		/* border: 2px outset palevioletred; */
+		border: 10px solid #fff;
+		border-bottom: 45px solid #fff;
+		-webkit-box-shadow: 3px 3px 3px #777;
+			 -moz-box-shadow: 3px 3px 3px #777;
+						box-shadow: 3px 3px 3px palevioletred;
+		transition: all .3s ease-in-out;
+		animation: fadein ease-in 2.5s;
+	}
+	.myImg {
+		box-shadow: 6px 6px 6px palevioletred;
+		opacity: 1;
+	}
+	.credits {
+		margin-top:11px;
+	}
+	.searchFor  {
+		font-size: 25px;
+		margin-bottom: 6px;
+	}
+}
+
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-17px); }
+}
+
+.picContainer:hover {
+	box-shadow: 10px 10px 10px palevioletred;
+	transform: scale(1.05);
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+
+.btn:hover{
+	transform: scale(1.1);
+}
+.singleHashtag:hover {
+	transform: scale(1.2);
+	color: palevioletred;
+}
+.username:hover {
+	transform: scale(1.05);
+}
+.myImg:hover {
+	transform:scale(1.02);
+	box-shadow: 4px 4px 4px palevioletred;
+	opacity: 1;
+}
+.btn:active {
+	transform: translateY(4px);
+}
+.btn:focus {outline:0;}
+
+.descriptionText:hover {
+	font-size: 18px;
 }
