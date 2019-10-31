@@ -16,8 +16,7 @@ export default class Index extends React.Component
 	    this.submitSearch();
 	  });
   }
-  
-	//fetches to Rails backend
+	//fetches to Rails backend for content 
   submitSearch = () => {																					
   	if (this.state.searchFor === "random")
   	{
@@ -57,7 +56,7 @@ export default class Index extends React.Component
 	}
 
 	restartAnimation = () => {																//Necessary to make sure animations happen every time search happens, rather than only first time
-		let random = Math.floor(Math.random()*900);
+		let random = Math.floor(Math.random()*800);
 		return random;
 	}
 	
