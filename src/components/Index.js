@@ -20,7 +20,7 @@ export default class Index extends React.Component
   submitSearch = () => {																					
   	if (this.state.searchFor === "random")
   	{
-  	  fetch(`https://wonderpic-backend.herokuapp.com/random`)
+  	  fetch(`https://quiet-dawn-30793.herokuapp.com/random`)
   	  .then(resp => resp.json())
   	  .then(data => {
   	    this.setState({
@@ -29,7 +29,7 @@ export default class Index extends React.Component
   	  })
   	}
   	else {
-  		fetch(`https://wonderpic-backend.herokuapp.com/search`,
+  		fetch(`https://quiet-dawn-30793.herokuapp.com/search`,
   		{
   		  method: "POST",
   		  headers: {
